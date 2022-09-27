@@ -1,0 +1,15 @@
+header{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+    border-bottom: solid 2px grey;
+}
+.navbar{
+    display: flex;
+    margin-left: 10px;
+    justify-content: space-between;
+    width: 30%;
+    list-style: none;
+    padding-top: 10px;
+}
