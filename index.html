@@ -3,36 +3,427 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
     <title>Document</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+        body{
+            margin: 0px;
+            padding: 0px;
+        }
+        header{
+            position: fixed;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+            background-image: linear-gradient(black,rgb(124, 114, 114),black);
+            color: azure;
+            border-radius: 20px;
+            height: 50px;
+            border-bottom: 5px solid grey;
+            border-top: 3px solid grey;
+            
+        }
+        .navbar{
+           display: flex;
+           justify-content: space-between;
+           width: 50%;
+           margin-right: 10px;
+           text-align: center;
+           padding-bottom: 20px;
+           list-style: none;
 
+        }
+        a{
+            color: white;
+            font-size: 30px;
+            text-decoration: none;
+        }
+        .logo{
+            margin-left: 50px;
+            text-align: cente;
+            text-shadow: 2px 2px 2px black;
+            font-size: 3rem;
+            animation: color 2s infinite;
+            
+        }
+        @keyframes color{
+            0%{color: orange;}
+            10%{color: purple;}
+            20%{color: red;}
+            30%{color: yellow;}
+            40%{color: green;}
+            50%{color: coral;}
+            60%{color: cyan;}
+            70%{color: deeppink;}
+            80%{color: dodgerblue;}
+            90%{color: orange;}
+            100%{color: #150b3a;}
+
+        }
+        .logo:hover{
+            
+            background-color: rgb(249, 246, 246);
+            color: rgb(9, 9, 9);
+            border-radius: 30px;
+           
+        }
+        ul a {
+            font-size: 2rem;
+            padding-bottom: 20px;
+            text-shadow: 2px 2px 2px black;
+            animation: color 5s infinite;
+        }
+        @keyframes color{
+            0%{color: orange;}
+            10%{color: purple;}
+            20%{color: red;}
+            30%{color: yellow;}
+            40%{color: green;}
+            50%{color: coral;}
+            60%{color: cyan;}
+            70%{color: deeppink;}
+            80%{color: dodgerblue;}
+            90%{color: orange;}
+            100%{color: #150b3a;}
+
+        }
+        ul a:hover{
+            background-color: blue;
+            padding: 10px;
+            color: rgb(248, 243, 243);
+            border-radius: 30px;
+        }
+        .home {
+            background-image: linear-gradient(black,rgb(124, 114, 114),black);
+            display: flex;
+            justify-content: space-between;
+        }
+        .social {
+            height: 100px;
+        }
+        section{
+            padding: 100px 10%;
+        }
+        .social{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            margin-top: 80px;
+        }
+        .home-text {
+            color: white;
+            margin-top: 50px;
+        }
+        .contact-me {
+            color: white;
+            text-decoration: none;
+            background-color: blue;
+            padding: 12px 15px;
+            border: 10px;
+            margin-top: 20px;
+        }
+        .home-img img {
+            height: 500px;
+            width: 500px;
+            border-radius: 50px;
+        }
+        .heading-name {
+            font-size: 2.5rem;
+
+        }
+        .para-home{
+            margin-top: 20px 0px;
+            font-size: 1.2rem;
+        }
+        .desg {
+            font-size: 20px;
+        }
+        .social a {
+            font-size: 1,5rem;
+            color: white;
+            margin-top: 1rem;
+        }
+        .aboutme {
+           text-align: center;
+           background-image: linear-gradient(black,rgb(124, 114, 114),black);
+           color: white;
+           border-top: 5px solid grey;
+           border-bottom: 5px solid grey;
+        }
+        .aboutme-section{
+            display: flex;
+            margin-top: 50px;
+            text-align: left;
+
+        }
+        .my-img {
+            border-radius: 800px;
+            height: 400px;
+            width: 500px;
+
+        }
+        .img-section{
+            margin-left: 50px;
+        }
+        .aboutme-text{
+            width: 50%;
+            margin-left: 20%;
+            font-family: arial;
+            font-size: 20px;
+        }
+        .icons-div {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            margin-top: 30px;
+            margin-bottom: 30px;
+            font-weight: bold;
+            color: brown;
+        }
+        .aboutme-heading{
+            font-size: 2.5rem;
+            color: rgb(18, 174, 217);
+        }
+        .intro-1{
+            font-size: 20px;
+            color: aqua;
+        }
+        .skills{
+            text-align: center;
+            background-image: linear-gradient(black,rgb(124, 114, 114),black);
+            color: rgb(18, 174, 217);
+            padding: 5%;
+            border-bottom: 5px solid grey;
+
+        }
+        .bars-box{
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+            margin-bottom: 0.5rem;
+            color: aqua;
+        }
+        .skill-section{
+            display: flex;
+            justify-content: space-between;
+            margin-top: 100px;
+        }
+        .light-bar {
+            width: 100%;
+            background: rgba(9, 9, 9, 0.4);
+            height: 0.5rem;
+            position: absolute;
+            top: 10;
+            bottom: 0;
+        }
+        .skill-bar{
+            width: 40%;
+        }
+        .percent-bar{
+            position: absolute;
+            top: 10;
+            bottom: 0;
+            background-color: #033a80;
+            height: 0.5rem;
+            border-radius: 0.5em;
+
+        }
+        .html-bar {
+            width: 90%;
+          
+
+        }
+        .css-bar{
+            width: 80%;
+        }
+        .javascript-bar{
+            width: 20%;
+        }
+        .bootstrap-bar{
+            width: 30%;
+        } 
+        .python-bar{
+            width: 60%;
+        }
+        .skills-heading{
+            font-size: 2.5rem;
+        }
+        .skill-img{
+            width: 500px;
+            height: 500px;
+            padding-right: 10px;
+        }
+        .projects{
+            background-image: linear-gradient(black,rgb(124, 114, 114),black);
+            color: rgb(18, 174, 217);
+            text-align: center;
+            border-bottom: 5px solid grey;
+        }
+        .projects-heading{
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+        }
+        .projects-img{
+            border-radius: 20px;
+            margin: 5px;
+        }
+        .contact-form{
+            background-image: linear-gradient(rgb(52, 50, 50),black,rgb(77, 74, 74));
+            color: rgb(18, 174, 217);
+        }
+        .form{
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+            margin: 0 auto;
+        }
+        .form ,input,textarea{
+            margin-bottom: 10px;
+            border-radius: 10px;
+            background-color: #150b3a;
+            text-decoration: none;
+            border: 0;
+            align-items: center;
+        }
+        .form ,input,textarea{
+            padding: 10px;
+            color: white;
+        }
+        .contact-me-heading{
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 2.5rem;
+
+        }
+        .submit{
+            margin-top: 40px;
+            width: 20%;
+            background-color: blue;
+          
+            color: white;
+            padding: 10px 15x;
+            margin: 0px auto;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
-  <header>
-    <a href="@" class="logo">MD SHOHEB</a>
-    <ul class="navbar">
-        <li><a href="home">Home</a></a></li>
-        <li><a href="about">About</a></a></li>
-        <li><a href="skills">Skills</a></a></li>
-        <li><a href="experience">Experience</a></a></li>
-        <li><a href="Projects">Projects</a></a></li>
-        <li><a href="contact">Contact</a></a></li>
-    </ul>
-  </header>
-  <section class="home">
-    <div>
+    <header>
+        <a href="#" class="logo">@MD Shoheb</a>
+        <ul class="navbar">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </header>
+    <!--Home-->
+    <section class="home" id="home">
+        <div class="social">
+            <a href="#"><div class="bi bi-linkedin"></div></a>
+            <a href="#"><div class="bi bi-facebook"></div></a>
+            <a href="#"><div class="bi bi-github"></div></a>
+        </div>
+        <div class="home-text">
+            <span class="desg">Hello, I'm</span>
+            <h1 class="heading-name">MD SHOHEB</h1>
+            <span class="desg">Software Developer</span>
+            <p class="para-home">Lorem ipsum dolor sit amet cones adipisicing elit. Minima, consectetur ullam?</p>
+            <a href="#contact" class="contact-me">Contact Me</a>
+        </div>
+        <div class="home-img">
+            <img src="../../public/images/Me-1.jpg" alt="img" srcset="">
+        </div>
 
-    </div>
-    <div>
-        <span>Hello, I'm</span>
-        <h1 class="heading-name">MD SHOHEB</h1>
-        <span>Software Developer</span>
-        <p></p>
+    </section>
+    <!--About Me-->
+    <section class="aboutme" id="about">
+        <h1 class="aboutme-heading">About Me</h1>
+        <span class="intro-1">Introduction</span>
+        <div class="aboutme-section">
+            <div class="img-section">
+                <img src="../../public/images/Contactus3.jpg"alt=""class="my-img">
+            </div>
+            <div class="aboutme-text">
+                <p>I am Md Shoheb. I am Software Development enthusiast and currently learning fullstack web development in Naresh IT.I am aspiring to become excellent software developer capable to solve complex real world problems</p>
+                <div class="icons-div">
+                    <span class="bi bi-person">Md Shoheb</span>
+                    <span class="bi bi-phone">+918466949610</span>
+                    <span class="bi bi-envelope">mdshoaibulhaq6@gmail.com</span>
+                    <a href="#contact" class="contact-me">Download Cv</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="skills" id="skills">
+        <h1 class="skills-heading">My Skills</h1>
         
-    </div>
-  </section>
+        <div class="skill-section">
+            <div class="skill-bar">
+                <div class="bars">
+                    <div class="bars-box">
+                        <h3>HTML</h3>
+                        <span>90%</span>
+                        <div class="light-bar"></div>
+                        <div class="percent-bar html-bar"></div>
+                    </div>
+                    <div class="bars-box">
+                        <h3>CSS</h3>
+                        <span>80%</span>
+                        <div class="light-bar"></div>
+                        <div class="percent-bar css-bar"></div>
+                    </div>
+                    <div class="bars-box">
+                        <h3>JavaScript</h3>
+                        <span>20%</span>
+                        <div class="light-bar"></div>
+                        <div class="percent-bar javascript-bar"></div>
+                    </div>
+                    <div class="bars-box">
+                        <h3>Bootstrap</h3>
+                        <span>30%</span>
+                        <div class="light-bar"></div>
+                        <div class="percent-bar bootstrap-bar"></div>
+                    </div>
+                    <div class="bars-box">
+                        <h3>Python</h3>
+                        <span>60%</span>
+                        <div class="light-bar"></div>
+                        <div class="percent-bar python-bar"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="skill-img">
+                <img src="../../public/images/images (4).jpeg" alt="">
+            </div>
+        </div>
+      
+    </section>
+    <section class="projects" id="projects">
+        <h1 class="projects-heading">Projects</h1>
+        <img src="../../public/images/mobile-0819.jpg" alt=""height="300" width="400">
+        <img src="../../public/images/N1.png" alt=""height="300" width="400">
+        <img src="../../public/images/mobile-0819.jpg" alt=""height="300" width="400">
+       
+
+    </section>
+    <section class="contact-form" id="contact">
+        <h1 class="contact-me-heading">Contact Me</h1>
+        <div>
+            <form>
+                <input type="text" name="name" id="name" placeholder="Your Name"><br>
+                <input type="text" name="emai" id="emai" placeholder="Your Email"><br>
+                <textarea name="message" id="message" cols="20" rows="10" placeholder="Enter your message..."></textarea>
+                <button class="submit">Send</button>
+    
+            </form>
+        </div>
+    </section>
 </body>
 </html>
